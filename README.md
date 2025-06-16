@@ -336,6 +336,8 @@ You're a wildlife photographer trying to get pictures of different types of dove
 -->
 
 ## >>Project: Final Grade Calculator
+At the end of most units, there is a project that is also reviewed by the mentors.
+
 Create a program that calculates the minimum percent the user needs on the final in order to get a specified letter grade.
 
 The user inputs:
@@ -357,7 +359,7 @@ minimum = current + 100.0 * (target - current) / weight
 If the user gives an invalid input for the letter grade, warn the user, and act as if the input were instead an `A`. \
 Assume that the two inputted percentages are valid and positive.
 
-Example input/output:
+Example input/output (wording does not have to exactly match the examples for projects):
 ```
 Current grade percentage:
 92.2
