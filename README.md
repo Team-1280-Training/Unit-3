@@ -48,23 +48,7 @@ When one of these expressions is evaluated, the program will wait for the user t
 Typically, some sort of prompt is printed before using these, to alert the user.
 
 In [`UserInput.java`](UserInput.java) read the program and run it.
-(move to file
-```java
-import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter a string:");
-        String string = input.nextLine();
-        System.out.println("Kewl: Xx_" + string + "_xX");
-        System.out.println("Enter an integer:");
-        int integer = input.nextInt();
-        System.out.println("Squared: " + integer * integer);
-    }
-}
-```
-)
 > **Note:** You may see an orange underline on `input`, which is a warning from VS Code. This specific warning that appears when declaring a `Scanner` variable can be ignored. \
 > To disable it, click on the underlined text. Then, click on the *light bulb* to the left, or press `Ctrl`+`.` . \
 > Then in the dropdown, click `Ignore compiler problem(s)` under `Quick Fix` section, (2nd option). 
@@ -194,9 +178,43 @@ In short, a chain of conditionals begins with a single if statement, then is fol
 ### >Exercise: Fossil Classification
 You're an archaeologist classifying recently excavated fossils for shipment to a museum. The museum wants you to sort the fossils by periods in the Mesozoic Era: Triassic (252-202 million years ago (mya)), Jurassic (201-145 mya), and Cretaceous (144-66 mya)
 
-1. Use a `Scanner` to read an `int` age from the user with prompt `Fossil age:`.
+[`FossilClassification.java`](FossilClassification.java)
+1. Use a `Scanner` to read an `int` age from the user with prompt `Fossil age:`. Remember to import `java.util.Scanner`!
 2. Create a series of if and else if statements that uses the fossil age to print the period it's from. If it belongs to none of the periods, print `._.` instead.
 3. Run the program for the age of a compsognathus fossil (a bipedal, chicken-sized carnivorous dinosaur) from around 147 mya.
+
+<details><summary>Solution code</summary>
+
+Your conditions don't have to look exactly like this (as long as they work!)
+```java
+import java.util.Scanner;
+
+public class FossilClassification {
+    public static void main(String[] args) throws Exception {
+        // Write your code below!
+        Scanner input = new Scanner(System.in);
+        System.out.println("Fossil age: ");
+        int age = input.nextInt();
+
+        if (age >= 202 && age <= 253) {
+            System.out.println("This is a fossil from the Triassic period!");
+        } else if (age >= 145 && age <= 201) {
+            System.out.println("This is a fossil from the Jurassic period!");
+        } else if (age >= 66 && age <= 144) {
+            System.out.println("This is a fossil from the Cretaceous period!");
+        } else {
+            System.out.println("._.");
+        }
+    }
+}
+```
+Output:
+```
+Fossil age:
+147
+This is a fossil from the Jurassic period!
+```
+</details>
 
 ## Switch Statements
 We use switch statements to check one value against a series of values. Switch statements are often more readable than chaining if-else statements, but can only be used when you're assessing the exact value of a single thing.
@@ -266,12 +284,63 @@ System.out.println(confirmation); // Output: true
 ### >Exercise: Polygon Identification
 You're a very bored math teacher and want to write a program that can classify basic polygons by number of sides.
 
+[`PolygonIdentification.java`](PolygonIdentification.java)
 1. Prompt the user with `Number of sides:` and read the user input.
 2. Create a switch statement  with cases for a polygon with 3, 4, 5, or 6 sides.
 3. Print the correct name of the polygon (3 sides = triangle, 4 sides = quadrilateral, 5 sides = pentagon, 6 sides = hexagon).
 4. If none match, print `figure it out yourself >:(` instead.
 5. Time to test! Run your program with your `sides` variable to `3`, `5`, and `200`
 6. Your program should output: `triangle`, `pentagon`, and `figure it out yourself >:(`.
+
+<details><summary>Solution code</summary>
+
+```java
+import java.util.Scanner;
+
+public class PolygonIdentification {
+    public static void main(String[] args) throws Exception {
+        // Write your code below!
+        Scanner input = new Scanner(System.in);
+        System.out.println("Number of sides: ");
+        int sides = input.nextInt();
+
+        switch (sides) {
+            case 3:
+                System.out.println("Triangle!");
+                break;
+            case 4:
+                System.out.println("Quadrilateral!");
+                break;
+            case 5:
+                System.out.println("Pentagon!");
+                break;
+            case 6:
+                System.out.println("Hexagon!");
+                break;
+            default:
+                System.out.println("figure it out yourself >:(");
+
+        }
+    }
+}
+```
+Output:
+```
+Number of sides:
+3
+Triangle!
+```
+```
+Number of sides:
+5
+Pentagon!
+```
+```
+Number of sides:
+200
+figure it out yourself >:(
+```
+</details>
 
 ## Nested Conditional Statements
 Since conditional statements are *statements*, we can **nest** conditional statements by putting one statement inside another!
@@ -308,18 +377,80 @@ While we could check `isWhale` and `isDolphin` separately, since dolphins *are* 
 
 ### >Exercise: Dove Photography
 You're a wildlife photographer trying to get pictures of different types of doves (specifically birds from the Columbidae family), but your favorites are blue eyed ground doves (which have orange feathers and blue eyes). Thankfully, they aren't hard to spot; they have many distinct traits that you can look for.
+
+[`DovePhotography.java`](DovePhotography.java)
 1. Your camera can automatically classify the `family`, `featherColor`, and `eyeColor` of birds you focus the lens on. Prompt and read user input for this data.
 2. When a dove is identified, print: `Dove! Take pictures!`
 3. When a blue eyed ground dove is identified, also print: `Cooler dove!! Take many pictures!!`
 4. If the bird is not a dove, print: `Meh bird... let's find a different one.`
 5. Time to test! Run your program with these different values:
-    - a. European Turtle Dove: `Columbidae` family, `brown` feathers, `orange` eyes.
-    - b. Asian Emerald Cuckoo: `Cuculidae` family, `green` feathers, `orange` eyes.
-    - c. Blue Eyed Ground Dove: `Columbidae` family, `orange` feathers, `blue` eyes.
+    - a. European Turtle Dove: `columbidae` family, `brown` feathers, `orange` eyes.
+    - b. Asian Emerald Cuckoo: `cuculidae` family, `green` feathers, `orange` eyes.
+    - c. Blue Eyed Ground Dove: `columbidae` family, `orange` feathers, `blue` eyes.
 6. Your program should output:
     - a. `Dove! Take pictures!`
     - b. `Meh bird... let's find a different one.`
     - c. `Cooler dove!! Take many pictures!!`
+
+<details><summary>Solution code</summary>
+
+```java
+import java.util.Scanner;
+
+public class DovePhotography {
+    public static void main(String[] args) throws Exception {
+        // Write your code below!
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Family of bird: ");
+        String family = input.nextLine();
+        System.out.println("Feather color: ");
+        String featherColor = input.nextLine();
+        System.out.println("Eye color: ");
+        String eyeColor = input.nextLine();
+
+        if (family.equals("columbidae")) {
+            System.out.println("Dove! Take pictures!");
+            if (featherColor.equals("orange") && eyeColor.equals("blue")) {
+                System.out.println("Cooler dove!! Take many pictures!!");
+            }
+        } else {
+            System.out.println("Meh bird... let's find a different one.");
+        }
+    }
+}
+
+```
+Output:
+```
+Family of bird:
+columbidae
+Feather color:
+brown
+Eye color:
+orange
+Dove! Take pictures!
+```
+```
+Family of bird:
+cuculidae
+Feather color:
+green
+Eye color:
+orange
+Meh bird... let's find a different one.
+```
+```
+Family of bird:
+columbidae
+Feather color:
+orange
+Eye color:
+blue
+Dove! Take pictures!
+Cooler dove!! Take many pictures!!
+```
+</details>
 
 ## Recap
 - Use `Scanner` with methods `nextInt()`, `nextDouble()`, `nextLine()` to receive user input
@@ -338,7 +469,8 @@ You're a wildlife photographer trying to get pictures of different types of dove
 ## >>Project: Final Grade Calculator
 At the end of most units, there is a project that is also reviewed by the mentors.
 
-Create a program that calculates the minimum percent the user needs on the final in order to get a specified letter grade.
+Create a program that calculates the minimum percent the user needs on the final in order to get a specified letter grade. \
+[`Grade.java`](Grade.java)
 
 The user inputs:
 - Their **current** grade percentage
