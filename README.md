@@ -7,6 +7,7 @@ We use conditional statements to control the flow of our program depending on ce
 - [Introduction](#introduction)
     - [Table of Contents](#table-of-contents)
 - [Scanner](#scanner)
+    - [>Exercise: User Input](#exercise-user-input)
 - [Block Statements](#block-statements)
     - [Variable Scope](#variable-scope)
 - [If, Else, and Else If Statements](#if-else-and-else-if-statements)
@@ -47,8 +48,6 @@ Then, the object can be used to get values from user input. Here are the common 
 When one of these expressions is evaluated, the program will wait for the user to type in something into the console (where output also goes) and press enter. \
 Typically, some sort of prompt is printed before using these, to alert the user.
 
-In [`UserInput.java`](UserInput.java) read the program and run it.
-
 > **Note:** You may see an orange underline on `input`, which is a warning from VS Code. This specific warning that appears when declaring a `Scanner` variable can be ignored. \
 > To disable it, click on the underlined text. Then, click on the *light bulb* to the left, or press `Ctrl`+`.` . \
 > Then in the dropdown, click `Ignore compiler problem(s)` under `Quick Fix` section, (2nd option). 
@@ -63,6 +62,42 @@ input.nextLine(); // Get rid of the newline from the previous input
 String text1 = input.nextLine();
 String text2 = input.nextLine();
 ```
+
+### >Exercise: User Input
+Write a simple program that processes some input. \
+[`UserInput.java`](UserInput.java)
+
+- Prompt the user for a string, then print that string with any added text or effects of your choice
+- Then, prompt the user for an integer, and print `Squared: ` followed by the integer squared
+
+<details><summary>Solution code</summary>
+
+```java
+import java.util.Scanner;
+
+public class UserInput {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a string:");
+        String string = input.nextLine();
+        System.out.println("**" + string + "!**");
+        System.out.println("Enter an integer:");
+        int integer = input.nextInt();
+        System.out.println("Squared: " + integer * integer);
+    }
+}
+```
+Input/output:
+```
+Enter a string:
+hello
+**hello!**
+Enter an integer:
+5
+Squared: 25
+```
+
+</details>
 
 ## Block Statements
 Conditional statements are not the usual one-line statements. They are **block statements** that contain **block(s)** of multiple other statements. \
