@@ -16,9 +16,9 @@ We use conditional statements to control the flow of our program depending on ce
     - [Else If Statements](#else-if-statements)
     - [>Exercise: Fossil Classification](#exercise-fossil-classification)
 - [Switch Statements](#switch-statements)
-- [>Exercise: Polygon Identification](#exercise-polygon-identification)
+    - [>Exercise: Polygon Identification](#exercise-polygon-identification)
 - [Nested Conditional Statements](#nested-conditional-statements)
-- [>Exercise: Dove Photography](#exercise-dove-photography)
+    - [>Exercise: Dove Photography](#exercise-dove-photography)
 - [Recap](#recap)
 - [>>Project: Final Grade Calculator](#project-final-grade-calculator)
 
