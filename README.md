@@ -46,7 +46,7 @@ Then, the object can be used to get values from user input. Here are the common 
 - `input.nextLine()` gives a `String`
 
 When one of these expressions is evaluated, the program will wait for the user to type in something into the console (where output also goes) and press enter. \
-Typically, some sort of prompt is printed before using these, to alert the user.
+Typically, some sort of prompt is printed before using these, to alert the user: either `System.out.println()` (input is on next line) or `System.out.print()` (input is on same line as prompt).
 
 > **Note:** You may see an orange underline on `input`, which is a warning from VS Code. This specific warning that appears when declaring a `Scanner` variable can be ignored. \
 > To disable it, click on the underlined text. Then, click on the *light bulb* to the left, or press `Ctrl`+`.` . \
@@ -61,6 +61,16 @@ int number = input.nextInt();
 input.nextLine(); // Get rid of the newline from the previous input
 String text1 = input.nextLine();
 String text2 = input.nextLine();
+```
+
+Also, here's a useful example of a simple implementation for a boolean (yes or no) answer:
+```java
+System.out.print("Proceed (y/n)? ");
+if (input.nextLine().equalsIgnoreCase("y")) {
+    // yes
+} else {
+    // no
+}
 ```
 
 ### >Exercise: User Input
@@ -289,29 +299,33 @@ Erroring example:
 ```java
 boolean confirmation;
 String input = "yes";
-switch (input) {
+switch (input.toLowerCase()) { // Convert to lowercase for case-insensitive matching
+    case "y":
     case "yes":
         confirmation = true;
         break;
+    case "n":
     case "no":
         confirmation = false;
         break;
 }
-System.out.println(confirmation); // ERROR! confirmation may be uninitialized, if input is something like "Hi"
+System.out.println(confirmation); // ERROR! confirmation might not have been initialized
+// For example, if input is something like "Hi"
 ```
 Fixed code:
 ```java
 boolean confirmation; // (Alternatively, initialize confirmation to false here)
 String input = "yes";
-switch (input) {
+switch (input.toLowerCase()) { // Convert to lowercase for case-insensitive matching
+    case "y":
     case "yes":
         confirmation = true;
         break;
+    case "n":
     case "no":
+    default: // Default to no
         confirmation = false;
         break;
-    default:
-        confirmation = false;
 }
 System.out.println(confirmation); // Output: true
 ```
