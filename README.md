@@ -230,6 +230,9 @@ You're an archaeologist classifying recently excavated fossils for shipment to a
 2. Create a series of if and else if statements that uses the fossil age to print the period it's from. If it belongs to none of the periods, print `._.` instead.
 3. Run the program for the age of a compsognathus fossil (a bipedal, chicken-sized carnivorous dinosaur) from around 147 mya.
 
+> **Tip:** Use `Ctrl`+`Enter` to insert a blank line below, which is useful when your cursor is in the middle of a line. \
+> Use `Ctrl`+`Shift`+`Enter` to insert a line above.
+
 <details><summary>Solution code</summary>
 
 Your conditions don't have to look exactly like this (as long as they work!)
@@ -513,9 +516,11 @@ Cooler dove!! Take many pictures!!
 - `switch` statements take a single value and jump to the matching `case`, or `default` if none match
 - Block statements such as conditional statements can be nested inside each other
 
-<!--
 ### Keyboard Shortcuts
--->
+| Keybinding | Command |
+| - | - |
+| `Ctrl`+`Enter` | Insert line below |
+| `Ctrl`+`Shift`+`Enter` | Insert line above |
 
 ## >>Project: Final Grade Calculator
 At the end of most units, there is a project that is also reviewed by the mentors.
