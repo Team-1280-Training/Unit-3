@@ -43,7 +43,8 @@ Scanner input = new Scanner(System.in);
 Then, the object can be used to get values from user input. Here are the common expressions:
 - `input.nextInt()` gives an `int`
 - `input.nextDouble()` gives a `double`
-- `input.nextLine()` gives a `String`
+- `input.nextLine()` gives the rest of the line, a `String`
+- `input.next()` gives the next word, a `String`
 
 When one of these expressions is evaluated, the program will wait for the user to type in something into the console (where output also goes) and press enter. \
 Typically, some sort of prompt is printed before using these, to alert the user: either `System.out.println()` (input is on next line) or `System.out.print()` (input is on same line as prompt).
@@ -54,7 +55,7 @@ Typically, some sort of prompt is printed before using these, to alert the user:
 
 Also, except for `.nextLine()`, the user can enter multiple values on a single line.
 
-**<u>Warning:</u>** if you use `.nextLine()` after a different input, then it will still be on the same input line, and `.nextLine()` instantly take the rest of the line, typically an empty string (nothing). \
+**<u>Warning:</u>** if you use `.nextLine()` after a different input, then the scanner will still be on the same input line, and `.nextLine()` will just instantly take the rest of the line, typically an empty string (nothing). \
 To prevent this, put `input.nextLine();` as a statement by itself to 'consume' the rest of the emptied line.
 ```java
 int number = input.nextInt();
