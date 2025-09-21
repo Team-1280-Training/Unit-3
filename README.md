@@ -76,8 +76,8 @@ if (scanner.nextLine().equalsIgnoreCase("y")) {
 ```
 
 ### >Exercise: User Input
-Write a simple program that processes some input. \
-[`UserInput.java`](UserInput.java)
+[`UserInput.java`](UserInput.java) \
+Write a simple program that processes some input.
 
 - Prompt the user for a string, then print that string with any added text or effects of your choice
 - Then, prompt the user for an integer, and print `Squared: ` followed by the integer squared
@@ -223,9 +223,9 @@ Note that again, only one block of code from this statement will be run by the p
 In short, a chain of conditionals begins with a single if statement, then is followed by an arbitrary number of else if statements, and then is optionally ended with an else statement. Only the first statement of the chain that doesn't have a false condition gets executed.
 
 ### >Exercise: Fossil Classification
+[`FossilClassification.java`](FossilClassification.java) \
 You're an archaeologist classifying recently excavated fossils for shipment to a museum. The museum wants you to sort the fossils by periods in the Mesozoic Era: Triassic (252-202 million years ago (mya)), Jurassic (201-145 mya), and Cretaceous (144-66 mya)
 
-[`FossilClassification.java`](FossilClassification.java)
 1. Use a `Scanner` to read an `int` age from the user with prompt `Fossil age:`. Remember to import `java.util.Scanner`!
 2. Create a series of if and else if statements that uses the fossil age to print the period it's from. If it belongs to none of the periods, print `._.` instead.
 3. Run the program for the age of a compsognathus fossil (a bipedal, chicken-sized carnivorous dinosaur) from around 147 mya.
@@ -333,9 +333,9 @@ System.out.println(confirmation); // Output: true
 ```
 
 ### >Exercise: Polygon Identification
+[`PolygonIdentification.java`](PolygonIdentification.java) \
 You're a very bored math teacher and want to write a program that can classify basic polygons by number of sides.
 
-[`PolygonIdentification.java`](PolygonIdentification.java)
 1. Prompt the user with `Number of sides:` and read the user input.
 2. Create a switch statement  with cases for a polygon with 3, 4, 5, or 6 sides.
 3. Print the correct name of the polygon (3 sides = triangle, 4 sides = quadrilateral, 5 sides = pentagon, 6 sides = hexagon).
@@ -427,9 +427,9 @@ While we could check `isWhale` and `isDolphin` separately, since dolphins *are* 
 > **Tip:** Be sure to use proper indentation levels at all times. This makes it clear what each block encompasses, something that can otherwise be confusing to new programmers if their indentation is off.
 
 ### >Exercise: Dove Photography
+[`DovePhotography.java`](DovePhotography.java) \
 You're a wildlife photographer trying to get pictures of different types of doves (specifically birds from the Columbidae family), but your favorites are blue eyed ground doves (which have orange feathers and blue eyes). Thankfully, they aren't hard to spot; they have many distinct traits that you can look for.
 
-[`DovePhotography.java`](DovePhotography.java)
 1. Your camera can automatically classify the `family`, `featherColor`, and `eyeColor` of birds you focus the lens on. Prompt and read user input for this data.
 2. When a dove is identified, print: `Dove! Take pictures!`
 3. When a blue eyed ground dove is identified, also print: `Cooler dove!! Take many pictures!!`
