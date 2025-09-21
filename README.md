@@ -51,7 +51,8 @@ Typically, some sort of prompt is printed before using these, to alert the user:
 
 > **Note:** You may see an orange underline on `input`, which is a warning from VS Code. This specific warning that appears when declaring a `Scanner` variable can be ignored. \
 > To disable it, click on the underlined text. Then, click on the *light bulb* to the left, or press `Ctrl`+`.` . \
-> Then in the dropdown, click `Ignore compiler problem(s)` under `Quick Fix` section, (2nd option). 
+> Then in the dropdown, click `Ignore compiler problem(s)` under `Quick Fix` section, (2nd option). \
+> Generally, it is not recommended to close a `Scanner` of `System.in`.
 
 Also, except for `.nextLine()`, the user can enter multiple values on a single line.
 
