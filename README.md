@@ -37,19 +37,19 @@ import java.util.Scanner;
 
 Now, you can create a scanner object in your program with the following variable declaration:
 ```java
-Scanner input = new Scanner(System.in);
+Scanner scanner = new Scanner(System.in);
 ```
 
 Then, the object can be used to get values from user input. Here are the common expressions:
-- `input.nextInt()` gives an `int`
-- `input.nextDouble()` gives a `double`
-- `input.nextLine()` gives the rest of the line, a `String`
-- `input.next()` gives the next word, a `String`
+- `scanner.nextInt()` gives an `int`
+- `scanner.nextDouble()` gives a `double`
+- `scanner.nextLine()` gives the rest of the line, a `String`
+- `scanner.next()` gives the next word, a `String`
 
 When one of these expressions is evaluated, the program will wait for the user to type in something into the console (where output also goes) and press enter. \
 Typically, some sort of prompt is printed before using these, to alert the user: either `System.out.println()` (input is on next line) or `System.out.print()` (input is on same line as prompt).
 
-> **Note:** You may see an orange underline on `input`, which is a warning from VS Code. This specific warning that appears when declaring a `Scanner` variable can be ignored. \
+> **Note:** You may see an orange underline on `scanner`, which is a warning from VS Code. This specific warning that appears when declaring a `Scanner` variable can be ignored. \
 > To disable it, click on the underlined text. Then, click on the *light bulb* to the left, or press `Ctrl`+`.` . \
 > Then in the dropdown, click `Ignore compiler problem(s)` under `Quick Fix` section, (2nd option). \
 > Generally, it is not recommended to close a `Scanner` of `System.in`.
@@ -57,18 +57,18 @@ Typically, some sort of prompt is printed before using these, to alert the user:
 Also, except for `.nextLine()`, the user can enter multiple values on a single line.
 
 **<u>Warning:</u>** if you use `.nextLine()` after a different input, then the scanner will still be on the same input line, and `.nextLine()` will just instantly take the rest of the line, typically an empty string (nothing). \
-To prevent this, put `input.nextLine();` as a statement by itself to 'consume' the rest of the emptied line.
+To prevent this, put `scanner.nextLine();` as a statement by itself to 'consume' the rest of the emptied line.
 ```java
-int number = input.nextInt();
-input.nextLine(); // Get rid of the newline from the previous input
-String text1 = input.nextLine();
-String text2 = input.nextLine();
+int number = scanner.nextInt();
+scanner.nextLine(); // Get rid of the newline from the previous input
+String text1 = scanner.nextLine();
+String text2 = scanner.nextLine();
 ```
 
 Also, here's a useful example of a simple implementation for a boolean (yes or no) answer:
 ```java
 System.out.print("Proceed (y/n)? ");
-if (input.nextLine().equalsIgnoreCase("y")) {
+if (scanner.nextLine().equalsIgnoreCase("y")) {
     // yes
 } else {
     // no
@@ -89,12 +89,12 @@ import java.util.Scanner;
 
 public class UserInput {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a string:");
-        String string = input.nextLine();
+        String string = scanner.nextLine();
         System.out.println("**" + string + "!**");
         System.out.println("Enter an integer:");
-        int integer = input.nextInt();
+        int integer = scanner.nextInt();
         System.out.println("Squared: " + integer * integer);
     }
 }
@@ -239,9 +239,9 @@ import java.util.Scanner;
 public class FossilClassification {
     public static void main(String[] args) throws Exception {
         // Write your code below!
-        Scanner input = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Fossil age: ");
-        int age = input.nextInt();
+        int age = scanner.nextInt();
 
         if (age >= 202 && age <= 253) {
             System.out.println("This is a fossil from the Triassic period!");
@@ -351,9 +351,9 @@ import java.util.Scanner;
 public class PolygonIdentification {
     public static void main(String[] args) throws Exception {
         // Write your code below!
-        Scanner input = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Number of sides: ");
-        int sides = input.nextInt();
+        int sides = scanner.nextInt();
 
         switch (sides) {
             case 3:
@@ -451,14 +451,14 @@ import java.util.Scanner;
 public class DovePhotography {
     public static void main(String[] args) throws Exception {
         // Write your code below!
-        Scanner input = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("Family of bird: ");
-        String family = input.nextLine();
+        String family = scanner.nextLine();
         System.out.println("Feather color: ");
-        String featherColor = input.nextLine();
+        String featherColor = scanner.nextLine();
         System.out.println("Eye color: ");
-        String eyeColor = input.nextLine();
+        String eyeColor = scanner.nextLine();
 
         if (family.equals("columbidae")) {
             System.out.println("Dove! Take pictures!");
