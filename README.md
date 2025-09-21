@@ -336,7 +336,7 @@ System.out.println(confirmation); // Output: true
 [`PolygonIdentification.java`](PolygonIdentification.java) \
 You're a very bored math teacher and want to write a program that can classify basic polygons by number of sides.
 
-1. Prompt the user with `Number of sides:` and read the user input.
+1. Prompt the user for and read the number of sides.
 2. Create a switch statement  with cases for a polygon with 3, 4, 5, or 6 sides.
 3. Print the correct name of the polygon (3 sides = triangle, 4 sides = quadrilateral, 5 sides = pentagon, 6 sides = hexagon).
 4. If none match, print `figure it out yourself >:(` instead.
@@ -352,7 +352,7 @@ public class PolygonIdentification {
     public static void main(String[] args) throws Exception {
         // Write your code below!
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Number of sides: ");
+        System.out.println("Number of sides:");
         int sides = scanner.nextInt();
 
         switch (sides) {
