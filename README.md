@@ -503,7 +503,9 @@ Final minimum percentage needed: 70.19999999999997% (C)
 ```
 
 ## Feedback
-Please provide feedback if you have any.
+Please provide feedback if you have any. \
+Also, please give an estimate of how much time you spent on this unit.
+
 <details><summary>Possible feedback points</summary>
 
 - Confusing explanations
