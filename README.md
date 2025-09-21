@@ -237,7 +237,7 @@ Your conditions don't have to look exactly like this (as long as they work!)
 import java.util.Scanner;
 
 public class FossilClassification {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         // Write your code below!
         Scanner scanner = new Scanner(System.in);
         System.out.println("Fossil age: ");
@@ -349,7 +349,7 @@ You're a very bored math teacher and want to write a program that can classify b
 import java.util.Scanner;
 
 public class PolygonIdentification {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         // Write your code below!
         Scanner scanner = new Scanner(System.in);
         System.out.println("Number of sides:");
@@ -449,7 +449,7 @@ You're a wildlife photographer trying to get pictures of different types of dove
 import java.util.Scanner;
 
 public class DovePhotography {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         // Write your code below!
         Scanner scanner = new Scanner(System.in);
 

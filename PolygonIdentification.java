@@ -1,5 +1,5 @@
 public class PolygonIdentification {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         // Write your code below!
 
     }
