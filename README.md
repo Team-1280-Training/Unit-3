@@ -514,7 +514,8 @@ The user inputs:
 
 The minimum percentage for $A$ is $90.0\%$, $B$ is $80.0\%$, $C$ is $70.0\%$, $D$ is $60.0\%$. $F$ is anything below that.
 
-The program outputs the minimum percentage on the final, and what letter grade it would be, that is necessary to get the minimum target letter percentage.
+The program outputs the minimum percentage needed on the final, to get an overall grade of the target letter or higher. \
+It also must display the letter grade that the outputted percentage on the final would correspond to.
 
 This minimum is given by (where all numbers are percents e.g. `90.0`):
 ```math
