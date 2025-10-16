@@ -523,7 +523,7 @@ Cooler dove!! Take many pictures!!
 | `Ctrl`+`Shift`+`Enter` | Insert line above |
 
 ## >>Project: Final Grade Calculator
-At the end of most units, there is a project that is also reviewed by the mentors.
+At the end of most units, there is a project that is also reviewed by the instructors.
 
 Create a program that calculates the minimum percent the user needs on the final in order to get a specified letter grade. \
 [`Grade.java`](Grade.java)
